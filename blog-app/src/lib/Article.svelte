@@ -13,10 +13,12 @@
 <style>
   article {
     border: black 1px solid;
-    padding: 1em;
     min-width: 300px;
+    margin-bottom: 1em;
+    margin-top: 1em;
   }
+
   h3 {
-    margin-top: -0.8em;
+    margin-top: 0.2em;
   }
 </style>

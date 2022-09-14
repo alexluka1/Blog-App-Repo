@@ -26,16 +26,21 @@
 
 <main>
   <div class="container">
-    <div class="left-bar">
+    <div class="submit-bar">
       <h1>Blog App</h1>
 
       <form action="">
         <input type="text" bind:value={header} />
-        <input type="text" bind:value={body} />
+        <textarea
+          name="body_input"
+          id="body_input"
+          rows="10"
+          bind:value={body}
+        />
         <button on:click={() => submitBlog(header, body)}>Submit Post</button>
       </form>
     </div>
-    <div class="right-bar">
+    <div class="updates">
       {#each headerArr as head, index}
         <Article header={headerArr[index]} body={bodyArr[index]} />
       {/each}
@@ -44,15 +49,35 @@
 </main>
 
 <style>
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 2em;
-    margin: 2em;
+  @media screen and (min-width: 800px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2em;
+      margin: 1em;
+    }
   }
 
-  .right-bar {
-    display: grid;
-    gap: 1em;
+  .submit-bar form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submit-bar form input {
+    margin: 0.5em;
+  }
+
+  .submit-bar form textarea {
+    margin: 0.5em;
+  }
+
+  .submit-bar form button {
+    margin: 0.5em;
+    display: flex;
+    width: fit-content;
+  }
+
+  .updates {
+    min-width: 300px;
   }
 </style>

@@ -23,16 +23,9 @@ body {
 
 #app {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
   text-align: center;
-}
-
-input {
-  max-height: 1.2em;
-  display: flex;
-  align-self: flex-end;
-  margin: 2em;
 }
 
 
